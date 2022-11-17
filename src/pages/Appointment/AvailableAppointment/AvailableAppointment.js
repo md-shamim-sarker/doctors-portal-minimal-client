@@ -12,10 +12,10 @@ const AvailableAppointment = ({selectedDate}) => {
             .then(data => setAppointmentOptions(data))
             .catch(err => console.log(err));
     }, []);
-    console.log(appointmentOptions);
+
     return (
         <div className='w-4/5 mx-auto my-10'>
-            <div className='text-center text-2xl font-bold my-5'>{format(selectedDate, 'PP')}</div>
+            <div className='text-center text-2xl font-bold my-5'>*********** {format(selectedDate, 'PP')}</div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
                 {
                     appointmentOptions.map((option, index) => <AppointmentOption
@@ -28,6 +28,8 @@ const AvailableAppointment = ({selectedDate}) => {
             {
                 treatment && <BookingModal
                     treatment={treatment}
+                    setTreatment={setTreatment}
+                    selectedDate={selectedDate}
                 ></BookingModal>
             }
         </div>

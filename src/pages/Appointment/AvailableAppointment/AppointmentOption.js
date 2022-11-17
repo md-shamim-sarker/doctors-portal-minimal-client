@@ -11,6 +11,7 @@ const AppointmentOption = ({option, setTreatment}) => {
                 <div className="card-actions justify-center">
                     {/* The button to open modal */}
                     <label
+                        disabled={slots.length === 0}
                         onClick={() => setTreatment(option)}
                         htmlFor="booking-modal"
                         className="btn btn-primary"

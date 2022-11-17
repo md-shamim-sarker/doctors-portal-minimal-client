@@ -11,6 +11,11 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><NavLink to={"/"}>Home</NavLink></li>
+                        <li><NavLink to={"/about"}>About</NavLink></li>
+                        <li><NavLink to={"/appointment"}>Appointment</NavLink></li>
+                        <li><NavLink to={"/reviews"}>Reviews</NavLink></li>
+                        <li><NavLink to={"/contactUs"}>Contact Us</NavLink></li>
+                        <li><NavLink to={"/login"}>Login</NavLink></li>
                     </ul>
                 </div>
                 <Link to={"/"} className="btn btn-ghost normal-case text-xl">Doctor's Portal</Link>
@@ -18,6 +23,11 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><NavLink to={"/"}>Home</NavLink></li>
+                    <li><NavLink to={"/about"}>About</NavLink></li>
+                    <li><NavLink to={"/appointment"}>Appointment</NavLink></li>
+                    <li><NavLink to={"/reviews"}>Reviews</NavLink></li>
+                    <li><NavLink to={"/contactUs"}>Contact Us</NavLink></li>
+                    <li><NavLink to={"/login"}>Login</NavLink></li>
                 </ul>
             </div>
         </div>

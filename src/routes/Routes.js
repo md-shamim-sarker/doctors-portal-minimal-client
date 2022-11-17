@@ -7,6 +7,7 @@ import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Login/Register";
 import Reviews from "../pages/Reviews/Reviews";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/appointment",
-                element: <Appointment></Appointment>
+                element: <PrivateRoute><Appointment></Appointment></PrivateRoute>
             },
             {
                 path: "/reviews",
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/contactUs",
-                element: <ContactUs></ContactUs>
+                element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>
             },
             {
                 path: "/login",
